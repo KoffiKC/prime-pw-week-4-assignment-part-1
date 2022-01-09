@@ -112,11 +112,20 @@ console.log( 'isFirstLetter - should say false', isFirstLetter('z', 'apple') );
 console.log( 'isFirstLetter - should say false', isFirstLetter('n', 'apple') );
 
 // 9. Function to return the sum of all numbers in an array
-function sumAll( ) {
+function sumAll(array) {
   let sum = 0
   // TODO: loop to add items
+  for ( num of array) { // iterastes through the array, for of lets us use values without arrat notation
+    sum += num; // adds number from array to sum only which keeps track of the total
+  }
   return sum;
 }
+//testing
+let test = [ 1, 2, 3, 4, 5]; // creating random number arrays to test
+let test2 =[427, 2, -15, 10000000, 0];
+
+console.log(sumAll(test)); // should log 15
+console.log(sumAll(test2)); // should log 10,000,414
 
 // 10. Function to return a new array of all positive (greater than zero)
 //     numbers contained in an input array. If there are no positive numbers
